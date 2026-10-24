@@ -1,0 +1,13 @@
+{
+  "name": "estimay",
+  "owner": { "name": "Estimay", "email": "hello@estimay.io" },
+  "description": "Estimay's plugins for Claude Code.",
+  "plugins": [
+    {
+      "name": "estimay",
+      "source": "./plugins/estimay",
+      "description": "Planning poker from Claude Code: Estimay's MCP server and a skill for running estimation the right way round.",
+      "category": "productivity"
+    }
+  ]
+}
