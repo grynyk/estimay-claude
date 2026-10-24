@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "estimay": {
+      "type": "http",
+      "url": "https://estimay.io/api/mcp"
+    }
+  }
+}
