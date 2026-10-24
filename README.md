@@ -18,3 +18,7 @@ claude mcp add --transport http estimay https://estimay.io/api/mcp
 It works in any MCP client that supports remote servers with OAuth (claude.ai custom connectors, Cursor, VS Code, ChatGPT). What it can do and how sign-in works: [estimay.io/developers](https://estimay.io/developers). Disconnect an assistant at [estimay.io/connect/assistant](https://estimay.io/connect/assistant).
 
 Questions or problems: hello@estimay.io.
+
+## License
+
+[MIT](LICENSE)
