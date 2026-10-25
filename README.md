@@ -7,6 +7,12 @@ The Claude Code plugin marketplace for [Estimay](https://estimay.io), free plann
 /plugin install estimay@estimay
 ```
 
+After marketplace approval (official directory), install with:
+
+```
+/plugin install estimay@claude-plugins-official
+```
+
 Then run `/mcp`, pick **estimay** and allow it in your browser (read only, or read and write).
 
 Not using Claude Code's plugins? Add the server on its own:
@@ -18,6 +24,12 @@ claude mcp add --transport http estimay https://estimay.io/api/mcp
 It works in any MCP client that supports remote servers with OAuth (claude.ai custom connectors, Cursor, VS Code, ChatGPT). What it can do and how sign-in works: [estimay.io/developers](https://estimay.io/developers). Disconnect an assistant at [estimay.io/connect/assistant](https://estimay.io/connect/assistant).
 
 Questions or problems: hello@estimay.io.
+
+## Publishing notes
+
+- Submit the MCP server separately as an MCP connector (not as a plugin bundle). Use: https://estimay.io/api/mcp
+- Bump `version` in `plugins/estimay/.claude-plugin/plugin.json` on every release before merge to main.
+- For fast marketplace updates, configure the GitHub push webhook during submission; otherwise updates are picked up on the scheduled check.
 
 ## License
 
