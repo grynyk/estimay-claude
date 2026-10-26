@@ -2,6 +2,15 @@
 
 The Claude Code plugin marketplace for [Estimay](https://estimay.io), free planning poker. The `estimay` plugin connects Claude Code to Estimay's MCP server and adds a skill for running planning poker the right way round: the assistant prepares the room and records the outcome; the team votes.
 
+## What is Estimay.io?
+
+Estimay is a collaborative planning poker app for agile teams.
+
+- Main site: https://estimay.io
+- Product overview and developer docs: https://estimay.io/developers
+- MCP server endpoint: https://estimay.io/api/mcp
+- Assistant connections (manage or disconnect): https://estimay.io/connect/assistant
+
 ```
 /plugin marketplace add grynyk/estimay-claude
 /plugin install estimay@estimay
