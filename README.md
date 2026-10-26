@@ -1,5 +1,7 @@
 # Estimay for Claude Code
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/grynyk/estimay-claude)
+
 The Claude Code plugin marketplace for [Estimay](https://estimay.io), free planning poker. The `estimay` plugin connects Claude Code to Estimay's MCP server and adds a skill for running planning poker the right way round: the assistant prepares the room and records the outcome; the team votes.
 
 ## What is Estimay.io?
