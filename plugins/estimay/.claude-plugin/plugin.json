@@ -1,14 +1,10 @@
 {
   "name": "estimay",
-  "version": "1.0.1",
-  "description": "Planning poker from Claude Code: Estimay's MCP server (rooms, stories, votes, estimates, tracker write-back) and a skill for running estimation the right way round.",
+  "version": "1.2.0",
+  "description": "Planning poker from Claude Code: Estimay's MCP server (rooms, stories, tracker imports, votes, estimates, tracker write-back) and a skill for running estimation the right way round.",
   "author": { "name": "Estimay", "email": "hello@estimay.io", "url": "https://estimay.io" },
   "homepage": "https://estimay.io/mcp-scrum-poker",
   "repository": "https://github.com/grynyk/estimay-claude",
-  "privacyPolicyUrl": "https://estimay.io/privacy",
-  "supportUrl": "https://estimay.io/contact",
-  "documentationUrl": "https://estimay.io/developers",
-  "termsOfServiceUrl": "https://estimay.io/terms",
   "license": "MIT",
   "keywords": ["planning-poker", "scrum-poker", "estimation", "agile", "sprint-planning", "mcp"]
 }
