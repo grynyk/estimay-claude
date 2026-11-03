@@ -15,6 +15,14 @@ Estimay runs planning poker rooms. Its MCP server (`estimay`) acts as the person
 3. **After the reveal: record it.** `set_estimate` saves the agreed estimate when the team settles on another card than the result. `get_room` shows the results, including how far apart the votes were; raise wide spreads as questions for the team, not as judgements.
 4. **After the meeting: write it down.** `export_results` gives a Markdown table with the total (or CSV). If the stories were imported from Jira, Linear, Trello, Asana or GitHub, `write_estimates` sends every estimate back through the room's own connection; otherwise update the issues with the tracker's own tools.
 
+## Sitting in as an AI participant
+
+Only when the user asks you to sit in on the vote yourself: `add_ai_participant` (host or facilitator; pass your name, like `Claude`) gives you a seat of your own, marked AI, and `ai_vote` plays your own card and a short reason on each story. This is the one exception to staying out of the vote.
+
+- Make it your own judgement, from the story: read an imported story through its `link` in `get_room` with the tracker's tools if you have them, otherwise go by its title and discipline. A split story has an id per discipline; vote on each for that discipline's work. `?` is an honest card when a title says too little.
+- Vote on every story not revealed yet, in one call: your card is down when each reaches the table, so nobody has to come back to you mid-meeting. A story skipped or voted again loses your card; vote on it again when asked.
+- Your cards and reasons stay hidden until each reveal, and count like anyone's. Never tell anyone a card or reason before then: an early number anchors the team. People read your reason by hovering your seat, so keep it to a line or two, about the work.
+
 ## Tips
 
 - Every tool takes a room's 5-character code or its link. Not given either? `list_rooms` lists the user's rooms, the most recently active first; confirm which one when it isn't obvious. Each room is also a resource, `estimay://rooms/<code>`, which the user can mention with `@`.
