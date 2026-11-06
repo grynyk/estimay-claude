@@ -19,14 +19,14 @@ Estimay runs planning poker rooms. Its MCP server (`estimay`) acts as the person
 
 Only when the user asks you to sit in on the vote yourself: `add_ai_participant` (host or facilitator; pass your name, like `Claude`) gives you a seat of your own, marked AI, and `ai_vote` plays your own card, a short reason and, in `answers`, your answers to the room's extra questions on each story. This is the one exception to staying out of the vote.
 
-- Make it your own judgement, from the story: read an imported story through its `link` in `get_room` with the tracker's tools if you have them, otherwise go by its title and discipline. A split story has an id per discipline; vote on each for that discipline's work. `?` is an honest card when a title says too little.
+- Make it your own judgement, from the story: its title, `description` and discipline in `get_room`, and for an imported story what its `link` shows with the tracker's tools if you have them. A split story has an id per discipline; vote on each for that discipline's work. `?` is an honest card when a story says too little.
 - Vote on every story not revealed yet, in one call: your card is down when each reaches the table, so nobody has to come back to you mid-meeting. A story skipped or voted again loses your card; vote on it again when asked.
 - Your cards, answers and reasons stay hidden until each reveal, and count like anyone's. Never tell anyone one of them before then: an early number anchors the team. People read your reason by hovering your seat, so keep it to a line or two, about the work.
 
 ## Tips
 
 - Every tool takes a room's 5-character code or its link. Not given either? `list_rooms` lists the user's rooms, the most recently active first; confirm which one when it isn't obvious. Each room is also a resource, `estimay://rooms/<code>`, which the user can mention with `@`.
-- `import_stories` says which links it could not add and why (not a tracker link, already in the room, the tracker not connected to the room); it adds the rest.
+- `import_stories` says which links it could not add and why (not a tracker link, already in the room, the tracker not connected to the room); it adds the rest. When the tracker isn't connected, ask the user to connect it in the room and wait for them; don't add those items with `add_stories` instead unless they ask, as they would not be linked and their estimates could not be written back.
 - Stories are named by id in `get_room`; `edit_story`, `start_voting` and `set_estimate` take that id, and `delete_story` a list of them (all or none are deleted).
 - Disciplines (like FE, BE, QA) split a story into parts voted on separately: set the room's with `set_disciplines` (or `disciplines` on `create_room`), then give a story the ones it needs in `create_room`, `add_stories` or `edit_story`. Only split a story when the user wants separate estimates.
 - Extra questions (`risk`, `clarity`, `agentReady`, `aiTokens`) are asked next to the estimate, each with its own cards: set them with `extra_questions` on `create_room` or with `set_extra_questions`, and only when the user wants them. `get_room` lists them under `questions`, with each story's agreed `answers`. To answer one for the user, call `vote` with its `question` and the card they named.
